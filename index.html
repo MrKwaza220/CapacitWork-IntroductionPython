@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Python</title>
+</head>
+<body>
+    <py-script>
+        
+# Define the patterns for each letter in the word "PYTHON"
+patterns = {
+    'P': ["****",
+          "*  *",
+          "****",
+          "*   ",
+          "*   "],
+    'Y': ["*   *",
+          " * * ",
+          "  *  ",
+          "  *  ",
+          "  *  "],
+    'T': ["*****",
+          "  *  ",
+          "  *  ",
+          "  *  ",
+          "  *  "],
+    'H': ["*  *",
+          "*  *",
+          "****",
+          "*  *",
+          "*  *"],
+    'O': [" *** ",
+          "*   *",
+          "*   *",
+          "*   *",
+          " *** "],
+    'N': ["*   *",
+          "**  *",
+          "* * *",
+          "*  **",
+          "*   *"]
+}
+
+ 
+
+# Function to display the word horizontally using patterns
+def display_word_horizontally(word):
+    for i in range(5):
+        for letter in word:
+            print(patterns[letter][i], end="  ")
+        print()
+
+ 
+
+# Call the function with the word "PYTHON"
+word_to_display = "PYTHON"
+display_word_horizontally(word_to_display)
+
+
+    </py-script>
+    
+</body>
+</html>
